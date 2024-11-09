@@ -1,0 +1,392 @@
+@import url(fontawesome-all.min.css);
+@import url("https://fonts.googleapis.com/css?family=Raleway:200,700|Source+Sans+Pro:300,600,300italic,600italic");
+
+*{
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    position: fixed;
+    display: flex;
+    top: 20px;
+    left: 0;
+    width: 88%;
+    padding: 20px 100px;
+    /* background: sienna; */
+    justify-content:space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.bang{
+    font-size: 2em;
+    color: wheat;
+    user-select: none;
+}
+
+.navigation a{
+    position: relative;
+    font-size: 1.1em;
+    color: wheat;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 3px;
+    background: whitesmoke;
+    border-radius: 5px;
+    transform-origin:right ;
+    transform: scaleX(0);
+    transition:transform .5s;
+}
+
+.navigation a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+body{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('../images/spirited\ away.webp');
+    background-size:cover;
+    background-position: center;
+}
+
+/* Banner */
+
+#banner {
+    padding: 200px 0 4.75em 0 ;
+}
+
+    #banner .inner {
+        margin: 0 auto;
+        width: 55em;
+    }
+
+    #banner .logo {
+        transition: opacity 2s ease, transform 1s ease;
+        transform: translateY(0);
+        opacity: 1;
+        margin: 0 0 1.3em 0;
+        color: sienna;
+    }
+
+        #banner .logo .icon {
+            border-radius: 100%;
+            border: solid 2px sienna;
+            cursor: default;
+            display: inline-block;
+            font-size: 2em;
+            height: 2.25em;
+            line-height: 2.25em;
+            text-align: center;
+            width: 2.25em;
+        }
+
+    #banner h2 {
+        transform: translateX(0);
+        filter: blur(0);
+        opacity: 1;
+        border-bottom: solid 2px sienna;
+        font-size: 2.25em;
+        margin-bottom: 0.8em;
+        padding-bottom: 0.4em;
+    }
+
+    #banner p {
+        transform: translateX(0);
+        filter: blur(0);
+        opacity: 1;
+        font-family: Raleway, Helvetica, sans-serif;
+        font-size: 1.1em;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        line-height: 2;
+        text-transform: uppercase;
+    }
+
+/* Footer */
+
+#footer .inner {
+    padding: 7em 0 3em 0 ;
+    display: flex;
+    -moz-flex-direction: row;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -moz-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 55em;
+}
+
+    #footer .inner > * {
+        width: 100%;
+    }
+
+    #footer .inner form {
+        margin: 0 3em 0 0;
+        width: calc(50% - 1.5em);
+    }
+
+    #footer .inner .contact {
+        width: calc(50% - 1.5em);
+    }
+
+    #footer .inner .copyright {
+        border-top: solid 2px rgba(255, 255, 255, 0.125);
+        list-style: none;
+        margin: 4em 0 2em 0;
+        padding: 2em 0 0 0;
+        width: 100%;
+    }
+
+        #footer .inner .copyright li {
+            border-left: solid 2px rgba(255, 255, 255, 0.125);
+            color: rgba(255, 255, 255, 0.35);
+            display: inline-block;
+            font-size: 0.9em;
+            line-height: 1;
+            margin-left: 1em;
+            padding: 0;
+            padding-left: 1em;
+        }
+
+            #footer .inner .copyright li:first-child {
+                border-left: 0;
+                margin-left: 0;
+                padding-left: 0;
+            }
+
+            #footer .inner .copyright li a {
+                color: inherit;
+            }
+
+
+/* Icons */
+
+ul.icons {
+    cursor: default;
+    list-style: none;
+    padding-left: 0;
+}
+
+    ul.icons li {
+        display: inline-block;
+        padding: 0 1em 0 0;
+    }
+
+        ul.icons li:last-child {
+            padding-right: 0;
+        }
+
+        ul.icons li .icon:before {
+            font-size: 1.25em;
+        }
+
+
+/* Contact */
+#footer h2 {
+    border-bottom: solid 2px sienna;
+    font-size: 1.3em;
+    margin-bottom: 0.8em;
+    padding-bottom: 0.4em;
+    text-transform: uppercase;
+}
+
+ul.contact {
+    list-style: none;
+    display:grid;
+    padding: 0px;
+}
+
+    ul.contact li {
+        text-decoration: none;
+        margin: 2.5em 0 0 0;
+        padding: 0 0 0 3.25em;
+        position:sticky;
+    }
+
+        ul.contact li:before {
+            /* display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            line-height: 1;
+            text-transform: none !important;
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 400; */
+            border-radius: 100%;
+            border: solid 2px rgba(255, 255, 255, 0.125);
+            display: inline-block;
+            font-size: 0.8em;
+            height: 2.5em;
+            left: 0;
+            line-height: 2.35em;
+            position: absolute;
+            text-align: center;
+            top: 0;
+            width: 2.5em;
+        }
+
+/* 
+    @media screen and (max-width: 736px) {
+
+        ul.contact li {
+            margin: 1.5em 0 0 0;
+        }
+
+    } */
+
+    *, *:before, *:after {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        font-family: 'Poppins', sans-serif;
+      }
+      
+      body{
+        bottom:20px;
+      }
+      
+      form {
+        max-width: 300px;
+        margin: 10px auto;
+        padding: 10px 20px;
+        border-radius: 8px;
+      }
+      
+      a {
+        text-decoration:none;
+      }
+      td {
+          text-align: center;
+      }
+      h1 {
+        margin: 0 0 30px 0;
+        text-align: center;
+      }
+      input[type="text"],
+      input[type="password"],
+      input[type="date"],
+      input[type="datetime"],
+      input[type="email"],
+      input[type="number"],
+      input[type="search"],
+      input[type="tel"],
+      input[type="time"],
+      input[type="url"],
+      textarea,
+      
+      select {
+        background: rgba(255,255,255,0.1);
+        border: none;
+        font-size: 16px;
+        height: auto;
+        margin: 0;
+        outline: 0;
+        padding: 15px;
+        width: 100%;
+        background-color: #e8eeef;
+        color: #8a97a0;
+        box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+        margin-bottom: 30px;
+      }
+      
+      input[type="radio"],
+      input[type="checkbox"] {
+        margin: 0 4px 8px 0;
+      }
+      
+      select {
+        padding: 6px;
+        height: 32px;
+        border-radius: 2px;
+      }
+      
+      button {
+        padding: 19px 39px 18px 39px;
+        color: #FFF;
+        background-color: #a8db34;
+        font-size: 18px;
+        text-align: center;
+        font-style: normal;
+        border-radius: 5px;
+        width: 100%;
+        border: 1px solid #71db34;
+        border-width: 1px 1px 3px;
+        box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+        margin-bottom: 10px;
+      }
+      
+      fieldset {
+        margin-bottom: 30px;
+        border: none;
+      }
+      
+      legend {
+        font-size: 1.4em;
+        margin-bottom: 10px;
+      }
+      
+      label {
+        display: block;
+        margin-bottom: 8px;
+      }
+      
+      label.light {
+        font-weight: 300;
+        display: inline;
+      }
+      #home {
+        max-width: 300px;
+        margin: 10px auto;
+        padding: 10px 20px;
+        background: #f4f7f8;
+        border-radius: 8px;
+      }
+      
+      .number {
+        background-color: #3498db;
+        color: #fff;
+        height: 30px;
+        width: 30px;
+        display: inline-block;
+        font-size: 0.8em;
+        margin-right: 4px;
+        line-height: 30px;
+        text-align: center;
+        text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+        border-radius: 100%;
+      }
+      
+      @media screen and (min-width: 480px) {
+      
+        form {
+          max-width: 480px;
+        }
+      
+      }
